@@ -3,6 +3,7 @@ import {Component} from 'react'
 import PaperInfo from './PaperInfo';
 import LogicPuzzle from './LogicPuzzle';
 import SectionAddButton from './SectionAddButton';
+import PaperSubmit from './PaperSubmit';
 
 export default class Paper extends Component {
   render() {
@@ -11,6 +12,7 @@ export default class Paper extends Component {
         <PaperInfo/>
         <LogicPuzzle/>
         <SectionAddButton/>
+        <PaperSubmit/>
       </div>
     );
   }
