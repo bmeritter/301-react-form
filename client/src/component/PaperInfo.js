@@ -5,7 +5,7 @@ export default class PaperInfo extends Component {
   render() {
     return (
       <div id="paper">
-        <div className="paper-header te">
+        <div className="paper-header">
           <span>新增试卷</span>
         </div>
 

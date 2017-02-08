@@ -4,6 +4,7 @@ import PaperInfo from './PaperInfo';
 import LogicPuzzle from './LogicPuzzle';
 import SectionAddButton from './SectionAddButton';
 import PaperSubmit from './PaperSubmit';
+import Section from './Section';
 
 export default class Paper extends Component {
   render() {
@@ -11,6 +12,7 @@ export default class Paper extends Component {
       <div>
         <PaperInfo/>
         <LogicPuzzle/>
+        <Section/>
         <SectionAddButton/>
         <PaperSubmit/>
       </div>

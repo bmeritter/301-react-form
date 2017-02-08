@@ -4,6 +4,8 @@
 
 body {
   background: @base;
+  margin: 0;
+  padding: 0;
 }
 
 #paper {
@@ -15,7 +17,7 @@ body {
     color: #fff;
 
     span {
-      margin-left: 30px;
+      margin-left: 20px;
     }
   }
 }
@@ -27,6 +29,47 @@ body {
       margin-left: 10px;
     }
   }
+}
+
+#section {
+  height: 180px;
+  line-height: 180px;
+  background-color: #f5f5f5;
+  margin-top: @hight;
+  padding: 0;
+  font-size: 15px;
+
+  .section-name {
+    padding-left: 15px;
+    height: @hight;
+    line-height: @hight;
+    background-color: #428BCA;
+    color: #fff;
+  }
+  .delete {
+    display: inline-block;
+    float: right;
+    position: relative;
+    padding-right: 5px;
+  }
+
+  .section-icon {
+    padding-left: 15px;
+    color: #999;
+    font-size: 80px;
+  }
+
+  .quiz-btn {
+    margin: 0 20px 20px 0;
+    border-color: #fff;
+    .fa-small {
+      margin: 20px 14px;
+      padding: 13px 10px;
+      font-size: 5.5em;
+      border: 1px solid #CCCCCC;
+    }
+  }
+
 }
 
 #section-button {
