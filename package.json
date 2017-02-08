@@ -1,12 +1,13 @@
 {
-  "name": "code-base",
+  "name": "301-react-form",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/app.js",
-    "webpack": "webpack"
+    "webpack": "webpack",
+    "wpw": "webpack -w"
   },
   "author": "",
   "license": "ISC",
