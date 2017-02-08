@@ -20,17 +20,17 @@ export default class LogicPuzzle extends Component {
           <form className="form-inline">
             <div className="form-group">
               <label for="easy">简单</label>
-              <input type="number" className="form-control" id="easy"/>
+              <input type="number" className="form-control"/>
             </div>
 
             <div className="form-group">
               <label for="normal">一般</label>
-              <input type="number" className="form-control" id="normal"/>
+              <input type="number" className="form-control"/>
             </div>
 
             <div className="form-group">
               <label for="difficult">困难</label>
-              <input type="number" className="form-control" id="difficult"/>
+              <input type="number" className="form-control"/>
             </div>
           </form>
         </div>
