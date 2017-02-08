@@ -1,8 +1,11 @@
 import React from 'react';
 import {render} from 'react-dom';
 import '../style/index.less';
+import Paper from './component/index';
 
 render(
-  <h1>Hello,World!</h1>,
+  <div>
+    <Paper/>
+  </div>,
   document.getElementById('app')
 );

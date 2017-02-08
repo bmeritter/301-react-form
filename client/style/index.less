@@ -1,5 +1,21 @@
 @base: #fff;
 
+@hight: 35px;
+
 body {
-    background: @base;
+  background: @base;
+}
+
+#paper {
+  .paper-header {
+    height: @hight;
+    line-height: @hight;
+    background-color: #428BCA;
+    margin-bottom: @hight;
+    color: #fff;
+    
+    span {
+      margin-left: 10px;
+    }
+  }
 }
