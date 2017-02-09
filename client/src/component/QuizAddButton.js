@@ -2,15 +2,6 @@ import React from 'react';
 import {Component} from 'react';
 import {Modal, Button} from 'react-bootstrap';
 
-const HomeworkQuiz = ({title, stack, _id}) => {
-  return (
-    <tr>
-      <th><input type="checkbox"/></th>
-      <th>{title}</th>
-      <th>{stack}</th>
-    </tr>
-  );
-};
 
 export default class QuizAddButton extends Component {
   constructor(props) {
@@ -36,8 +27,46 @@ export default class QuizAddButton extends Component {
     });
   }
 
+  handleChange(e) {
+    console.log(e.target);
+    const _id = e.target.value;
+    const checked = e.target.checked;
+
+    console.log(this.state.homeworkQuiz)
+    const homeworkItems = this.state.homeworkQuiz.items.map((item) => {
+      return Object.assign({}, item, {
+        checked: item._id === _id ? checked : item.checked
+      });
+    });
+    const homeworkQuiz = {
+      items: homeworkItems,
+      totalCount: this.state.homeworkQuiz.totalCount
+    };
+    this.setState({
+      homeworkQuiz
+    });
+
+  }
+
+  addQuiz() {
+    this.changeModelState();
+
+    this.props.addHomeworkQuiz();
+  }
+
   render() {
     let quizItems = this.state.homeworkQuiz.items || [];
+
+    const HomeworkQuiz = ({title, stack, checked, _id}) => {
+      return (
+        <tr>
+          <th><input type="checkbox" checked={checked} value={_id} onChange={this.handleChange.bind(this)}/></th>
+          <th>{title}</th>
+          <th>{stack}</th>
+        </tr>
+      );
+    };
+
     return (
       <div>
         <div className="quiz-btn">
@@ -74,7 +103,7 @@ export default class QuizAddButton extends Component {
             </table>
           </Modal.Body>
           <Modal.Footer>
-            <Button bsStyle="primary" onClick={this.changeModelState.bind(this)}>确定</Button>
+            <Button bsStyle="primary" onClick={this.addQuiz.bind(this)}>确定</Button>
           </Modal.Footer>
 
         </Modal>

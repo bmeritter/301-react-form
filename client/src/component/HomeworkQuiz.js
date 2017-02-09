@@ -13,7 +13,7 @@ export default class HomeworkQuiz extends Component {
 
     return (
       <div hidden="true" className="col-sm-1 homework-quiz">
-        
+
       </div>
     );
   }
