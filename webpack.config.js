@@ -64,8 +64,11 @@ module.exports = {
       template: path.join(__dirname, '/client/index.html'),
       inject: true,
       chunks: ['index', 'vendors']
-    })
+    }),
   ],
+  performance: {
+    hints: false
+  },
   resolve: {
     alias: {
       'bootstrap.css': 'bootstrap/dist/css/bootstrap.min.css',
