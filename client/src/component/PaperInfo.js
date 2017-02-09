@@ -3,14 +3,15 @@ import {Component} from 'react';
 
 export default class PaperInfo extends Component {
   editPaperName() {
-
+    this.props.editPaper({name: this.name.value});
   }
 
   editPaperDescription() {
-
+    this.props.editPaper({description: this.description.value});
   }
 
   render() {
+    console.log(this.props)
     return (
       <div id="paper">
         <div className="paper-header">
