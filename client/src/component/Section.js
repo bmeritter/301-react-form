@@ -2,6 +2,7 @@ import React from 'react';
 import {Component} from 'react';
 
 import QuizAddButton from '../container/quizAddButton';
+import HomeworkQuiz from './HomeworkQuiz';
 
 export default class Section extends Component {
   render() {
@@ -18,6 +19,7 @@ export default class Section extends Component {
 
           </div>
 
+          <HomeworkQuiz/>
           <QuizAddButton/>
         </div>
       </div>

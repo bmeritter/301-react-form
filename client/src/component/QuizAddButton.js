@@ -28,8 +28,9 @@ export default class QuizAddButton extends Component {
   }
 
   loadHomeworkQuiz() {
-    this.changeModelState();
     this.props.initHomeworkQuiz();
+
+    this.changeModelState();
     this.setState({
       homeworkQuiz: this.props || {}
     });
