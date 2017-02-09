@@ -6,15 +6,33 @@ const papers = (state = {}, action) => {
       return paper;
 
     case 'EDIT_PAPER_INFO' : {
-      let newData = paper;
+      let newPaper = paper;
       const {name, description} = action.data;
       if (name) {
-        newData.name = name;
+        newPaper.name = name;
       }
       if (description) {
-        newData.description = description;
+        newPaper.description = description;
       }
-      return newData;
+      console.log(newPaper);
+      return newPaper;
+    }
+
+    case 'UPDATE_LOGIC_PUZZLE': {
+      let newPaper = paper;
+      let logicSection = paper.sections.find((section) => {
+        return section.type === 'logicPuzzle';
+      });
+
+      logicSection = action.data;
+      logicSection = newPaper.sections.map((section) => {
+        if (section.type === 'logicPuzzle') {
+          section.definition = logicSection;
+        }
+        return section;
+      });
+      console.log(newPaper);
+      return newPaper;
     }
 
     default:
