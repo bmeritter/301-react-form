@@ -1,11 +1,20 @@
 import React from 'react';
 import {render} from 'react-dom';
-import '../style/index.less';
-import Paper from './component/index';
+import {Provider} from 'react-redux';
+import thunkMiddleware from 'redux-thunk';
+import {createStore, applyMiddleware} from 'redux';
 
+import '../style/index.less';
+import Paper from './container/index';
+import rootReducer from './reducer/index';
+
+const store = createStore(
+  rootReducer,
+  applyMiddleware(thunkMiddleware)
+);
 render(
-  <div>
+  <Provider store={store}>
     <Paper/>
-  </div>,
+  </Provider>,
   document.getElementById('app')
 );

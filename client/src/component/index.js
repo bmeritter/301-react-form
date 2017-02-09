@@ -7,7 +7,12 @@ import PaperSubmit from './PaperSubmit';
 import Section from './Section';
 
 export default class Paper extends Component {
+  componentDidMount() {
+    this.props.initPaperData();
+  }
+
   render() {
+    console.log(this.props)
     return (
       <div>
         <PaperInfo/>

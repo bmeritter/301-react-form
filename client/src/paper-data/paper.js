@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   "name": "react",
   "description": "考察react基础",
   "sections": [
@@ -8,7 +8,9 @@ module.exports = {
         "easy": 2,
         "normal": 3,
         "hard": 4
-      },
+      }
+    },
+    {
       "type": "homeworkQuiz",
       "definition": {
         "quizzes": [

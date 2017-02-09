@@ -2,6 +2,14 @@ import React from 'react';
 import {Component} from 'react';
 
 export default class PaperInfo extends Component {
+  editPaperName() {
+
+  }
+
+  editPaperDescription() {
+
+  }
+
   render() {
     return (
       <div id="paper">
@@ -15,14 +23,20 @@ export default class PaperInfo extends Component {
             <div className="form-group">
               <label for="paperName" className="col-sm-2 control-label">试卷名称</label>
               <div className="col-sm-8">
-                <input type="text" className="form-control" id="paperName" placeholder="请输入试卷名称"/>
+                <input type="text" className="form-control" id="paperName"
+                       placeholder="请输入试卷名称" ref={(ref) => {
+                  this.name = ref;
+                }} onBlur={this.editPaperName.bind(this)}/>
               </div>
             </div>
 
             <div className="form-group">
               <label for="paperDescription" className="col-sm-2 control-label">试卷描述</label>
               <div className="col-sm-8">
-                <textarea className="form-control" id="paperDescription" placeholder="请输入试卷描述"/>
+                <textarea className="form-control" id="paperDescription" placeholder="请输入试卷描述"
+                          ref={(ref) => {
+                            this.description = ref;
+                          }} onBlur={this.editPaperDescription.bind(this)}/>
               </div>
             </div>
 
