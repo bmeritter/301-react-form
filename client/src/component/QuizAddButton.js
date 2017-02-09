@@ -39,13 +39,15 @@ export default class QuizAddButton extends Component {
     let quizItems = this.state.homeworkQuiz.items || [];
     return (
       <div>
-        <div className="quiz-btn" onClick={this.loadHomeworkQuiz.bind(this)}>
-          <i className="section-icon fa fa-plus fa-small"></i>
+        <div className="quiz-btn">
+          <i className="section-icon fa fa-plus fa-small" onClick={this.loadHomeworkQuiz.bind(this)}></i>
         </div>
 
         <Modal show={this.state.modelState}>
           <Modal.Header>
-            <Modal.Title>试题列表</Modal.Title>
+            <Modal.Title>试题列表
+              <i className="fa fa-remove pull-right" onClick={this.changeModelState.bind(this)}></i>
+            </Modal.Title>
           </Modal.Header>
 
           <Modal.Body>
@@ -60,9 +62,9 @@ export default class QuizAddButton extends Component {
               <tbody>
 
               {
-                quizItems.map((quiz) => {
+                quizItems.map((quiz, index) => {
                   return (
-                    <HomeworkQuiz {...quiz}/>
+                    <HomeworkQuiz key={index} {...quiz}/>
                   );
                 })
               }
