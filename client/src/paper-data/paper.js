@@ -4,18 +4,12 @@ export default {
   "sections": [
     {
       "type": "logicPuzzle",
-      "definition": {
-        "easy": 2,
-        "normal": 3,
-        "hard": 4
-      }
+      "definition": {}
     },
     {
       "type": "homeworkQuiz",
       "definition": {
-        "quizzes": [
-          "12345" // quizId
-        ]
+        "quizzes": []
       }
     }
   ]

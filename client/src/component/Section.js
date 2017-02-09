@@ -2,7 +2,7 @@ import React from 'react';
 import {Component} from 'react';
 
 import QuizAddButton from '../container/quizAddButton';
-import HomeworkQuiz from './HomeworkQuiz';
+import HomeworkQuiz from '../container/homeworkQuiz';
 
 export default class Section extends Component {
   render() {
