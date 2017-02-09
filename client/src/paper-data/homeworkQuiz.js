@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   "items": [
     {
       "_id": "12345",

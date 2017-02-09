@@ -1,4 +1,5 @@
 import paper from '../paper-data/paper';
+import homeworkQuiz from '../paper-data/homeworkQuiz';
 
 const papers = (state = {}, action) => {
   switch (action.type) {
@@ -34,6 +35,9 @@ const papers = (state = {}, action) => {
       console.log(newPaper);
       return newPaper;
     }
+
+    case 'INIT_HOMEWORKQUIZ' :
+      return homeworkQuiz;
 
     default:
       return state;

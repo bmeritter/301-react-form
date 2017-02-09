@@ -1,6 +1,8 @@
 import React from 'react';
 import {Component} from 'react';
 
+import QuizAddButton from '../container/quizAddButton';
+
 export default class Section extends Component {
   render() {
     return (
@@ -16,9 +18,7 @@ export default class Section extends Component {
 
           </div>
 
-          <div className="quiz-btn">
-            <i className="section-icon fa fa-plus fa-small"></i>
-          </div>
+          <QuizAddButton/>
         </div>
       </div>
 
