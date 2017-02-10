@@ -6,7 +6,7 @@ import PaperSubmit from './paper-submit';
 import Section from './section';
 
 export default class Paper extends Component {
-  componentDidMount() {
+  componentWillMount() {
     this.props.initPaperData();
   }
 
