@@ -1,5 +1,4 @@
-import React from 'react';
-import {Component} from 'react'
+import React, {Component}  from 'react';
 import PaperInfo from '../container/paper-info';
 import LogicPuzzle from '../container/logic-puzzle';
 import SectionAddButton from './section-add-button';

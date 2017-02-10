@@ -1,6 +1,5 @@
-import React from 'react';
-import {Component} from 'react';
 import {Modal, Button} from 'react-bootstrap';
+import React, {Component}  from 'react';
 
 
 export default class QuizAddButton extends Component {

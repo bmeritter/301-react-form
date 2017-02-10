@@ -12,6 +12,7 @@ const store = createStore(
   rootReducer,
   applyMiddleware(thunkMiddleware)
 );
+
 render(
   <Provider store={store}>
     <Paper/>
