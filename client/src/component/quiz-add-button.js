@@ -22,16 +22,14 @@ export default class QuizAddButton extends Component {
 
     this.changeModelState();
     this.setState({
-      homeworkQuiz: this.props || {}
+      homeworkQuiz: this.props.homeworkQuiz || {}
     });
   }
 
   handleChange(e) {
-    console.log(e.target);
     const _id = e.target.value;
     const checked = e.target.checked;
 
-    console.log(this.state.homeworkQuiz)
     const homeworkItems = this.state.homeworkQuiz.items.map((item) => {
       return Object.assign({}, item, {
         checked: item._id === _id ? checked : item.checked
@@ -50,7 +48,17 @@ export default class QuizAddButton extends Component {
   addQuiz() {
     this.changeModelState();
 
-    this.props.addHomeworkQuiz();
+    let homework = this.state.homeworkQuiz.items || [];
+    let quizzes = homework.filter(({checked}) => {
+      return checked === true;
+    });
+    if (quizzes.length === 0) {
+      return;
+    }
+    quizzes = quizzes.map((item) => {
+      return item._id;
+    });
+    this.props.addHomeworkQuiz(quizzes);
   }
 
   render() {

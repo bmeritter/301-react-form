@@ -8,6 +8,9 @@ const mapDispatchToProps = (dispatch) => {
     updateLogicPuzzle: (data) => {
       dispatch({type: 'UPDATE_LOGIC_PUZZLE', data});
     },
+    initLogicPuzzle: () => {
+      dispatch({type: 'INIT_LOGIC-PUZZLE'});
+    }
   };
 };
 

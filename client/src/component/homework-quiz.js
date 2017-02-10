@@ -4,14 +4,15 @@ export default class HomeworkQuiz extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      homeworkQuiz: {}
-    };
+      quizzes: []
+    }
   }
 
   render() {
-
     return (
-      <div hidden="true" className="col-sm-1 homework-quiz">
+      <div>
+        <div hidden="false" className="col-sm-1 homework-quiz">
+        </div>
 
       </div>
     );

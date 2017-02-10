@@ -2,8 +2,8 @@ import React, {Component}  from 'react';
 
 export default class PaperInfo extends Component {
   componentDidMount() {
-    this.name.value = this.props.name || '';
-    this.description.value = this.props.description || ''
+    this.name.value = this.props.paper.name || '';
+    this.description.value = this.props.paper.description || ''
   }
 
   editPaperName() {

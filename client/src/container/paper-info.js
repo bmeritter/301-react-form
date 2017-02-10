@@ -1,7 +1,9 @@
 import {connect} from 'react-redux';
 import PaperInfo from '../component/paper-info';
 
-const mapStateToProps = (state) => state;
+const mapStateToProps = (state) => {
+  return {paper: state.paper};
+};
 
 const mapDispatchToProps = (dispatch) => {
   return {

@@ -34,6 +34,10 @@ export default class LogicPuzzle extends Component {
     }
   }
 
+  componentDidMount() {
+    this.props.initLogicPuzzle();
+  }
+
   changeLogicState() {
     this.setState({
       logicState: !this.state.logicState

@@ -8,8 +8,8 @@ const mapDispatchToProps = (dispatch) => {
     initHomeworkQuiz: () => {
       dispatch({type: 'INIT_HOMEWORKQUIZ'});
     },
-    addHomeworkQuiz: () => {
-
+    addHomeworkQuiz: (data) => {
+      dispatch({type: 'ADD_HOMEWORKQUIZ', data});
     }
   };
 };
