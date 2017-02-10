@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import QuizAddButton from '../component/QuizAddButton';
+import QuizAddButton from '../component/quiz-add-button';
 
 const mapStateToProps = (state) => state;
 

@@ -1,5 +1,5 @@
 import paper from '../paper-data/paper';
-import homeworkQuiz from '../paper-data/homeworkQuiz';
+import homeworkQuiz from '../paper-data/homework-quiz';
 
 const papers = (state = {}, action) => {
   switch (action.type) {

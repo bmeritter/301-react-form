@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import PaperInfo from '../component/PaperInfo';
+import PaperInfo from '../component/paper-info';
 
 const mapStateToProps = (state) => state;
 

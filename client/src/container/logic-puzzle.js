@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import LogicPuzzle from '../component/LogicPuzzle';
+import LogicPuzzle from '../component/logic-puzzle';
 
 const mapStateToProps = (state) => state;
 

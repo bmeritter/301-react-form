@@ -1,8 +1,8 @@
 import React from 'react';
 import {Component} from 'react';
 
-import QuizAddButton from '../container/quizAddButton';
-import HomeworkQuiz from '../container/homeworkQuiz';
+import QuizAddButton from '../container/quiz-add-button';
+import HomeworkQuiz from '../container/homework-quiz';
 
 export default class Section extends Component {
   render() {

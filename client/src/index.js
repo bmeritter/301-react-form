@@ -5,7 +5,7 @@ import thunkMiddleware from 'redux-thunk';
 import {createStore, applyMiddleware} from 'redux';
 
 import '../style/index.less';
-import Paper from './container/index';
+import Paper from './container/app';
 import rootReducer from './reducer/index';
 
 const store = createStore(

@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import HomeworkQuiz from '../component/HomeworkQuiz';
+import HomeworkQuiz from '../component/homework-quiz';
 
 const mapStateToProps = (state) => state;
 
