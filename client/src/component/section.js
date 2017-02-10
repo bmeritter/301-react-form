@@ -1,12 +1,12 @@
 import React, {Component}  from 'react';
 
 import QuizAddButton from '../container/quiz-add-button';
-import HomeworkQuiz from '../container/homework-quiz';
+import HomeworkQuiz from './homework-quiz';
 
 export default class Section extends Component {
   render() {
-    let homeworkQuiz = this.props.definition.quizzes || []
-    
+    let homeworkQuiz = this.props.definition.quizzes || [];
+
     return (
       <div className="section col-sm-offset-1 col-sm-10">
         <div className="section-head">
@@ -19,8 +19,13 @@ export default class Section extends Component {
             </div>
 
           </div>
-
-          <HomeworkQuiz/>
+          {
+            homeworkQuiz.map((quiz, index) => {
+              return (
+                <HomeworkQuiz key={index} quiz={quiz}/>
+              )
+            })
+          }
           <QuizAddButton/>
         </div>
       </div>

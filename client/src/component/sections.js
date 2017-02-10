@@ -13,7 +13,7 @@ export default class Sections extends Component {
         {
           sections.map((section, index) => {
             return (
-              <Section key={index} {...section}/>
+              <Section key={index} sectionId={index} {...section}/>
             )
           })
         }
