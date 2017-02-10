@@ -12,7 +12,7 @@ export default class PaperInfo extends Component {
   render() {
     console.log(this.props)
     return (
-      <div id="paper">
+      <div>
         <div className="paper-header">
           <span>新增试卷</span>
         </div>

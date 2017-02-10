@@ -58,7 +58,7 @@ export default class LogicPuzzle extends Component {
 
   render() {
     return (
-      <div id="logic-puzzle">
+      <div className="logic-puzzle">
         <form className="form-horizontal">
           <div className="form-group">
             <label className="col-sm-2 control-label">逻辑题</label>
