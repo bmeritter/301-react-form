@@ -12,7 +12,7 @@ export default class Paper extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         <PaperInfo/>
         <LogicPuzzle/>
         <Section/>
