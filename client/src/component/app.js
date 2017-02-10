@@ -3,7 +3,7 @@ import PaperInfo from '../container/paper-info';
 import LogicPuzzle from '../container/logic-puzzle';
 import SectionAddButton from './section-add-button';
 import PaperSubmit from './paper-submit';
-import Section from './section';
+import Section from '../container/sections';
 
 export default class Paper extends Component {
   componentWillMount() {

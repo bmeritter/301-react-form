@@ -1,0 +1,23 @@
+import React, {Component} from 'react';
+import Section from './section';
+
+export default class Sections extends Component {
+  componentDidMount() {
+    this.props.loadSections();
+  }
+
+  render() {
+    let sections = this.props.sections || [];
+    return (
+      <div>
+        {
+          sections.map((section, index) => {
+            return (
+              <Section key={index} {...section}/>
+            )
+          })
+        }
+      </div>
+    );
+  }
+}

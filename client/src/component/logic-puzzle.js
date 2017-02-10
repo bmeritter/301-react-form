@@ -39,8 +39,6 @@ export default class LogicPuzzle extends Component {
   }
 
   componentDidUpdate() {
-    console.log(this.props.logicPuzzle);
-
     this.logic.checked = !this.props.logicType;
     this.easy.value = this.props.logicPuzzle.logicPuzzle.easy || '';
     this.normal.value = this.props.logicPuzzle.logicPuzzle.normal || '';

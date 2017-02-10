@@ -5,6 +5,8 @@ import HomeworkQuiz from '../container/homework-quiz';
 
 export default class Section extends Component {
   render() {
+    let homeworkQuiz = this.props.definition.quizzes || []
+    
     return (
       <div className="section col-sm-offset-1 col-sm-10">
         <div className="section-head">
