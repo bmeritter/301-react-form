@@ -1,7 +1,9 @@
 import {connect} from 'react-redux';
 import LogicPuzzle from '../component/logic-puzzle';
 
-const mapStateToProps = (state) => state;
+const mapStateToProps = (state) => {
+  return {logicPuzzle: state.logicPuzzle};
+};
 
 const mapDispatchToProps = (dispatch) => {
   return {

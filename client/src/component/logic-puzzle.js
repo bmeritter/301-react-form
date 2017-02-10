@@ -9,7 +9,7 @@ const difficultLevel = [
     difficulty: 'normal'
   }, {
     text: '困难',
-    difficulty: 'difficult'
+    difficulty: 'hard'
   }
 ];
 
@@ -38,10 +38,17 @@ export default class LogicPuzzle extends Component {
     this.props.initLogicPuzzle();
   }
 
+  componentDidUpdate() {
+    console.log(this.props.logicPuzzle);
+
+    this.logic.checked = !this.props.logicType;
+    this.easy.value = this.props.logicPuzzle.logicPuzzle.easy || '';
+    this.normal.value = this.props.logicPuzzle.logicPuzzle.normal || '';
+    this.hard.value = this.props.logicPuzzle.logicPuzzle.hard || '';
+  }
+
   changeLogicState() {
-    this.setState({
-      logicState: !this.state.logicState
-    });
+    this.logic.checked = !this.logic.checked;
 
     this.handleUpdateLogic();
   }
@@ -53,7 +60,7 @@ export default class LogicPuzzle extends Component {
       definition = {
         easy: parseInt(this.easy.value) || 0,
         normal: parseInt(this.normal.value) || 0,
-        hard: parseInt(this.difficult.value) || 0
+        hard: parseInt(this.hard.value) || 0
       };
     }
     this.props.updateLogicPuzzle(definition);
@@ -79,7 +86,8 @@ export default class LogicPuzzle extends Component {
             {
               difficultLevel.map((item, index) => {
                 return (
-                  <DifficultSetter key={index} {...item} content={this} disabled={this.state.logicState}/>
+                  <DifficultSetter key={index} {...item} content={this}
+                                   disabled={!this.props.logicPuzzle }/>
                 )
               })
             }

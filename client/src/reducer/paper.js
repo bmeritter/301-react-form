@@ -20,6 +20,7 @@ const papers = (state = {}, action) => {
 
     case 'UPDATE_LOGIC_PUZZLE': {
       let newPaper = paper;
+
       let logicSection = paper.sections.find((section) => {
         return section.type === 'logicPuzzle';
       });
