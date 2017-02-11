@@ -38,14 +38,22 @@ const papers = (state = {}, action) => {
 
     case 'ADD_HOMEWORKQUIZ' :
       let newPaper = paper;
-      let quizzes = action.data;
-      let section = {
-        type: 'homeworkQuiz',
-        definition: {
-          quizzes
-        }
-      };
-      newPaper.sections.push(section);
+      let quizzes = action.data.quizzes;
+      let sectionId = action.data.sectionId;
+      let newSection = paper.sections.filter((section) => {
+        return section.type === 'homeworkQuiz';
+      });
+      let newQuizzes = newSection[sectionId].definition.quizzes;
+      newQuizzes = newQuizzes.concat(quizzes);
+
+      newSection[sectionId].definition.quizzes = newQuizzes;
+
+      let logicPuzzle = paper.sections.filter((section) => {
+        return section.type === 'logicPuzzle';
+      });
+      newSection = logicPuzzle.concat(newSection);
+
+      newPaper.sections = newSection;
 
       return newPaper;
 

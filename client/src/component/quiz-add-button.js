@@ -58,7 +58,7 @@ export default class QuizAddButton extends Component {
     quizzes = quizzes.map((item) => {
       return item._id;
     });
-    this.props.addHomeworkQuiz(quizzes);
+    this.props.addHomeworkQuiz({quizzes, sectionId: this.props.sectionId});
   }
 
   render() {

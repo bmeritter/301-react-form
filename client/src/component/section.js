@@ -26,7 +26,7 @@ export default class Section extends Component {
               )
             })
           }
-          <QuizAddButton/>
+          <QuizAddButton sectionId={this.props.sectionId}/>
         </div>
       </div>
 
