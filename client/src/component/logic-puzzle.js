@@ -27,13 +27,6 @@ const DifficultSetter = ({text, difficulty, content, disabled}) => {
 };
 
 export default class LogicPuzzle extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      logicState: true
-    }
-  }
-
   componentDidMount() {
     this.props.initLogicPuzzle();
   }
@@ -46,14 +39,12 @@ export default class LogicPuzzle extends Component {
   }
 
   changeLogicState() {
-    this.logic.checked = !this.logic.checked;
-
     this.handleUpdateLogic();
   }
 
   handleUpdateLogic() {
 
-    let definition;
+    let definition = {};
     if (this.logic.checked) {
       definition = {
         easy: parseInt(this.easy.value) || 0,

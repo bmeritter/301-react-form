@@ -21,6 +21,14 @@ const papers = (state = {}, action) => {
     case 'UPDATE_LOGIC_PUZZLE': {
       let newPaper = paper;
 
+      if (action.data) {
+        let newSection = newPaper.sections.filter((section) => {
+          return section.type !== 'logicPuzzle';
+        });
+        newPaper.sections = newSection;
+        return newPaper;
+      }
+
       let logicSection = paper.sections.find((section) => {
         return section.type === 'logicPuzzle';
       });
@@ -32,7 +40,6 @@ const papers = (state = {}, action) => {
         }
         return section;
       });
-      console.log(newPaper);
       return newPaper;
     }
 
