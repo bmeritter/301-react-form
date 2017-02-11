@@ -4,6 +4,10 @@ import QuizAddButton from '../container/quiz-add-button';
 import HomeworkQuiz from './homework-quiz';
 
 export default class Section extends Component {
+  deleteSection() {
+    this.props.deleteSection({sectionId: this.props.sectionId});
+  }
+
   render() {
     let homeworkQuiz = this.props.definition.quizzes || [];
 
@@ -15,7 +19,7 @@ export default class Section extends Component {
             <i className="fa fa-edit"></i>
 
             <div className="delete">
-              <i className="fa fa-trash"></i>
+              <i className="fa fa-trash" onClick={this.deleteSection.bind(this)}></i>
             </div>
 
           </div>

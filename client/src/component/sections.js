@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Section from './section';
+import Section from '../container/section';
 
 export default class Sections extends Component {
   componentDidMount() {

@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import Sections from '../component/sections';
+import Section from '../component/section';
 
 const mapStateToProps = (state) => {
   return state;
@@ -7,9 +7,6 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    loadSections: () => {
-      dispatch({type: 'LOAD_SECTIONS'});
-    },
     deleteSection: (data) => {
       dispatch({type: 'DELETE_SECTIONS', data});
     }
@@ -17,4 +14,4 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Sections);
+export default connect(mapStateToProps, mapDispatchToProps)(Section);

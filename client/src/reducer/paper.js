@@ -36,7 +36,7 @@ const papers = (state = {}, action) => {
       return newPaper;
     }
 
-    case 'ADD_HOMEWORKQUIZ' :
+    case 'ADD_HOMEWORKQUIZ' : {
       let newPaper = paper;
       let quizzes = action.data.quizzes;
       let sectionId = action.data.sectionId;
@@ -56,6 +56,29 @@ const papers = (state = {}, action) => {
       newPaper.sections = newSection;
 
       return newPaper;
+    }
+
+
+    case 'DELETE_SECTIONS' : {
+      let newPaper = paper;
+      let sectionId = action.data.sectionId;
+      let newSection = paper.sections.filter((section) => {
+        return section.type === 'homeworkQuiz';
+      });
+
+      newSection = newSection.filter((section, index) => {
+        return index !== sectionId;
+      });
+
+      let logicPuzzle = paper.sections.filter((section) => {
+        return section.type === 'logicPuzzle';
+      });
+      newSection = logicPuzzle.concat(newSection);
+
+      newPaper.sections = newSection;
+
+      return newPaper;
+    }
 
     default:
       return state;
