@@ -1,7 +1,7 @@
 import React, {Component}  from 'react';
 import PaperInfo from '../container/paper-info';
 import LogicPuzzle from '../container/logic-puzzle';
-import SectionAddButton from './section-add-button';
+import SectionAddButton from '../container/section-add-button';
 import PaperSubmit from './paper-submit';
 import Section from '../container/sections';
 

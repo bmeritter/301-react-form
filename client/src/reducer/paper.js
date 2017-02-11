@@ -97,6 +97,17 @@ const papers = (state = {}, action) => {
       return newPaper;
     }
 
+    case 'ADD_SECTION' : {
+      let newPaper = paper;
+      let section = {
+        type: 'homeworkQuiz',
+        definition: {}
+      };
+      newPaper.sections.push(section)
+
+      return newPaper;
+    }
+
     default:
       return state;
   }
