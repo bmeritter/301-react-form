@@ -27,6 +27,14 @@ const DifficultSetter = ({text, difficulty, content, disabled}) => {
 };
 
 export default class LogicPuzzle extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      inputState: !this.props.logicPuzzle,
+      logicState: !this.props.logicType
+    }
+  }
+
   componentDidMount() {
     this.props.initLogicPuzzle();
   }
@@ -39,7 +47,13 @@ export default class LogicPuzzle extends Component {
   }
 
   changeLogicState() {
-    this.handleUpdateLogic();
+    this.setState({
+      inputState: !this.state.inputState,
+      logicState: !this.state.logicState
+    }, () => {
+      this.logic.checked = this.state.logicState;
+      this.handleUpdateLogic();
+    });
   }
 
   handleUpdateLogic() {
@@ -76,7 +90,7 @@ export default class LogicPuzzle extends Component {
               difficultLevel.map((item, index) => {
                 return (
                   <DifficultSetter key={index} {...item} content={this}
-                                   disabled={!this.props.logicPuzzle }/>
+                                   disabled={this.state.inputState}/>
                 )
               })
             }
