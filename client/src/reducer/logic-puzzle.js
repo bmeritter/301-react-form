@@ -7,13 +7,12 @@ const papers = (state = {}, action) => {
         return section.type === 'logicPuzzle';
       });
 
-      return {
-        logicPuzzle: logicPuzzle.definition,
-      };
+      return logicPuzzle.definition;
     }
     default:
       return state;
   }
+
 };
 
 export default papers;
