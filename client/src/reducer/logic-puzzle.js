@@ -6,7 +6,6 @@ const papers = (state = {}, action) => {
       let logicPuzzle = paper.sections.find((section) => {
         return section.type === 'logicPuzzle';
       });
-      let logicType = !!logicPuzzle;
 
       return {
         logicPuzzle: logicPuzzle.definition,

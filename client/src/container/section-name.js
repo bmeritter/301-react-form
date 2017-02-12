@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import Section from '../component/section';
+import SectionName from '../component/section-name';
 
 const mapStateToProps = (state) => {
   return state;
@@ -14,4 +14,4 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Section);
+export default connect(mapStateToProps, mapDispatchToProps)(SectionName);
