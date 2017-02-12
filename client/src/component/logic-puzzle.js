@@ -24,6 +24,9 @@ export default class LogicPuzzle extends Component {
   }
 
   handleUpdateLogic(definition) {
+    if (!this.logic.checked) {
+      definition = {};
+    }
     this.props.updateLogicPuzzle(definition);
   }
 
