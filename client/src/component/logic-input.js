@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 
-
 const difficultLevel = [
   {
     text: '简单',
@@ -15,18 +14,19 @@ const difficultLevel = [
 ];
 
 const DifficultSetter = ({text, difficulty, content, disabled}) => {
-
   return (
     <div className="form-group">
       <label>{text}</label>
-      <input disabled={disabled} type="number" className="form-control" ref={(ref) => {
-        content[difficulty] = ref;
-      }} onBlur={content.handleChange.bind(content)}/>
+      <input className="form-control"
+             disabled={disabled}
+             type="number"
+             ref={(ref) => {
+               content[difficulty] = ref;
+             }}
+             onBlur={content.handleChange.bind(content)}/>
     </div>
-
   );
 };
-
 
 export default class LogicInputs extends Component {
   componentDidUpdate() {
@@ -58,7 +58,6 @@ export default class LogicInputs extends Component {
           }
         </form>
       </div>
-
     );
   }
 }
