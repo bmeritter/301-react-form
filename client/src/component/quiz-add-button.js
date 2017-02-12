@@ -76,10 +76,8 @@ export default class QuizAddButton extends Component {
     };
 
     return (
-      <div>
-        <div className="quiz-btn">
-          <i className="section-icon fa fa-plus fa-small" onClick={this.loadHomeworkQuiz.bind(this)}></i>
-        </div>
+      <div className="col-sm-1 quiz-btn text-center">
+        <i className="section-icon fa fa-plus fa-small" onClick={this.loadHomeworkQuiz.bind(this)}></i>
 
         <Modal show={this.state.modelState}>
           <Modal.Header>

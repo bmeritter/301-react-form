@@ -1,6 +1,12 @@
 @base: #e5e5e5;
+@titleBgColor: #428BCA;
 
-@hight: 35px;
+@marginHeight: 35px;
+
+@borderColor: #CCCCCC;
+
+@white: #fff;
+@iconColor: #999;
 
 body {
   background: @base;
@@ -8,80 +14,75 @@ body {
   padding: 0;
 }
 
-.paper-header {
-  height: @hight;
-  line-height: @hight;
-  background-color: #428BCA;
-  margin-bottom: @hight;
-  color: #fff;
-
-  span {
-    margin-left: 20px;
-  }
-}
-
-.logic-puzzle {
-  .difficult-setter {
-    .form-control {
-      width: 50%;
-      margin-left: 10px;
-    }
-  }
-}
-
-.section {
-  height: 180px;
-  line-height: 180px;
-  background-color: #f5f5f5;
-  margin-top: @hight;
-  padding: 0;
-  font-size: 15px;
-
-  .section-name {
-    padding-left: 15px;
-    height: @hight;
-    line-height: @hight;
-    background-color: #428BCA;
-    color: #fff;
-  }
-  .delete {
-    display: inline-block;
-    float: right;
-    position: relative;
-    padding-right: 5px;
+#app {
+  .paper-header {
+    height: @marginHeight;
+    line-height: @marginHeight;
+    background-color: @titleBgColor;
+    margin-bottom: @marginHeight;
+    color: @white;
   }
 
-  .section-icon {
-    padding-left: 15px;
-    color: #999;
-    font-size: 80px;
-  }
-
-  .quiz-btn {
-    margin: 0 20px 20px 0;
-    border-color: #fff;
-    .fa-small {
-      margin: 20px 14px;
-      padding: 13px 10px;
-      font-size: 5.5em;
-      border: 1px solid #CCCCCC;
+  .logic-puzzle {
+    .difficult-setter {
+      .form-control {
+        width: 50%;
+        margin-left: 10px;
+      }
     }
   }
 
-}
+  .section {
+    height: 180px;
+    line-height: 180px;
+    background-color: #f5f5f5;
+    margin-top: @marginHeight;
+    padding: 0;
+    font-size: 15px;
 
-.section-button {
-  background-color: #f5f5f5;
-  margin-top: @hight;
-  margin-bottom: @hight;
-  .section-icon {
-    color: #999;
-    font-size: 100px;
+    .section-name {
+      padding-left: 15px;
+      height: @marginHeight;
+      line-height: @marginHeight;
+      background-color: @titleBgColor;
+      color: @white;
+    }
+    .delete {
+      display: inline-block;
+      float: right;
+      position: relative;
+      padding-right: 5px;
+    }
+
+    .quiz-btn {
+      margin: 20px;
+      height: 110px;
+      line-height: 110px;
+      padding-left: 0;
+      border: 1px solid @borderColor;
+      .fa-small {
+        font-size: 80px;
+        color: @iconColor;
+        padding-left: 7px;
+        padding-top: 17px;
+      }
+    }
+
   }
-}
 
-.homework-quiz {
-  margin: 20px;
-  height: 110px;
-  border: 1px solid #CCCCCC;
+  .section-button {
+    background-color: @white;
+    margin-top: @marginHeight;
+    margin-bottom: @marginHeight;
+    .section-icon {
+      color: #999;
+      font-size: 100px;
+    }
+  }
+
+  .homework-quiz {
+    margin: 20px;
+    height: 110px;
+    border: 1px solid @borderColor;
+  }
 }
