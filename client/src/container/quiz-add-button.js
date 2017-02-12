@@ -5,9 +5,6 @@ const mapStateToProps = (state) => state;
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    initHomeworkQuiz: () => {
-      dispatch({type: 'INIT_HOMEWORKQUIZ'});
-    },
     addHomeworkQuiz: (data) => {
       dispatch({type: 'ADD_HOMEWORKQUIZ', data});
     }

@@ -1,6 +1,7 @@
 import {Modal, Button} from 'react-bootstrap';
 import React, {Component}  from 'react';
 
+import homeworkQuiz from '../paper-data/homework-quiz';
 
 export default class QuizAddButton extends Component {
   constructor(props) {
@@ -18,12 +19,12 @@ export default class QuizAddButton extends Component {
   }
 
   loadHomeworkQuiz() {
-    this.props.initHomeworkQuiz();
-
-    this.changeModelState();
     this.setState({
-      homeworkQuiz: this.props.homeworkQuiz || {}
+      homeworkQuiz
+    }, () => {
+      this.changeModelState();
     });
+
   }
 
   handleChange(e) {

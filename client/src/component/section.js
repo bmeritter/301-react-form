@@ -15,7 +15,7 @@ export default class Section extends Component {
       <div className="section col-sm-offset-1 col-sm-10">
         <div className="section-head">
           <div className="section-name">
-            <span className="col-sm-1 ">编程题</span>
+            <span className="col-sm-1 ">{this.props.title || ''}</span>
             <i className="fa fa-edit"></i>
 
             <div className="delete">
