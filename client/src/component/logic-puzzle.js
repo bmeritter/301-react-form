@@ -30,8 +30,7 @@ export default class LogicPuzzle extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      inputState: !this.props.logicPuzzle,
-      logicState: !this.props.logicType
+      inputState: this.props.logicPuzzle,
     }
   }
 
@@ -49,9 +48,8 @@ export default class LogicPuzzle extends Component {
   changeLogicState() {
     this.setState({
       inputState: !this.state.inputState,
-      logicState: !this.state.logicState
     }, () => {
-      this.logic.checked = this.state.logicState;
+      this.logic.checked = this.state.inputState;
       this.handleUpdateLogic();
     });
   }
@@ -90,7 +88,7 @@ export default class LogicPuzzle extends Component {
               difficultLevel.map((item, index) => {
                 return (
                   <DifficultSetter key={index} {...item} content={this}
-                                   disabled={this.state.inputState}/>
+                                   disabled={!this.state.inputState}/>
                 )
               })
             }

@@ -10,7 +10,6 @@ const papers = (state = {}, action) => {
 
       return {
         logicPuzzle: logicPuzzle.definition,
-        logicType
       };
     }
     default:
